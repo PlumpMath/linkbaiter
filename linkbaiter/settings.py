@@ -1,10 +1,10 @@
-# Scrapy settings for plusonenewsbot project
-BOT_NAME = 'plusonenewsbot'
+# Scrapy settings for linkbaiter project
+BOT_NAME = 'linkbaiter'
 
-SPIDER_MODULES = ['plusonenewsbot.spiders']
-NEWSPIDER_MODULE = 'plusonenewsbot.spiders'
+SPIDER_MODULES = ['linkbaiter.spiders']
+NEWSPIDER_MODULE = 'linkbaiter.spiders'
 
-DEFAULT_ITEM_CLASS = 'plusonenewsbot.items.Website'
+DEFAULT_ITEM_CLASS = 'linkbaiter.items.Website'
 
 # some sane limits by default (override if needed)
 CLOSESPIDER_PAGECOUNT = 1000
@@ -14,11 +14,11 @@ RETRY_ENABLED = False
 COOKIES_ENABLED = False
 
 ITEM_PIPELINES = {
-    'plusonenewsbot.middleware.AlertRegexesPipeline' : 998,
-    'plusonenewsbot.middleware.MySQLStorePipeline' : 999
+    'linkbaiter.middleware.AlertRegexesPipeline' : 998,
+    'linkbaiter.middleware.MySQLStorePipeline' : 999
 }
 DOWNLOADER_MIDDLEWARES = {
-    'plusonenewsbot.middleware.RandomUserAgent': 1
+    'linkbaiter.middleware.RandomUserAgent': 1
 }
 
 USER_AGENTS = [

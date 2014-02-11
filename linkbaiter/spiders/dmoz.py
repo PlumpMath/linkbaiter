@@ -1,7 +1,7 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 
-from plusonenewsbot.items import Website
+from linkbaiter.items import Website
 
 
 class DmozSpider(BaseSpider):

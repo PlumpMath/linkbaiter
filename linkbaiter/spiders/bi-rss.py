@@ -1,7 +1,7 @@
 from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 
-from plusonenewsbot.items import Website, WebsiteLoader
+from linkbaiter.items import Website, WebsiteLoader
 
 
 class BusinessInspider(BaseSpider):
