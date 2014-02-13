@@ -7,7 +7,7 @@ CREATE TABLE IF NOT EXISTS website (
   name TEXT,
   description TEXT,
   url TEXT,
-  processed boolean not null default 0,
+  status TINYINT not null default 0,
   updated DATETIME,
   created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) DEFAULT CHARSET=utf8;
