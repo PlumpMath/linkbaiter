@@ -80,15 +80,8 @@ class MySQLStorePipeline(object):
 
     def _do_upsert(self, conn, item, spider):
         """Perform an insert or update."""
-        print("Storing the item in the database")
-
-
-
-        print("Getting guid for item %s" % item['url'])
 
         guid = self._get_guid(item)
-
-        print("GUID %s" % guid)
         now = datetime.utcnow().replace(microsecond=0).isoformat(' ')
 
         conn.execute("""SELECT EXISTS(

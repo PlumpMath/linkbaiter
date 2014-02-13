@@ -4,11 +4,11 @@ from scrapy.selector import HtmlXPathSelector
 from linkbaiter.items import Website, WebsiteLoader
 
 
-class BusinessInspider(BaseSpider):
-    name = "bi"
-    allowed_domains = ["businessinsider.com"]
+class BuzzfeedSpider(BaseSpider):
+    name = "bf"
+    allowed_domains = ["buzzfeed.com"]
     start_urls = [
-        "http://feeds.feedburner.com/businessinsider?format=xml"
+        "http://www.buzzfeed.com/index.xml"
     ]
 
     def parse(self, response):

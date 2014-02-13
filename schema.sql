@@ -1,8 +1,8 @@
 CREATE DATABASE IF NOT EXISTS linkbaiter;
 
 USE linkbaiter;
-DROP TABLE IF EXISTS website;
-CREATE TABLE website (
+
+CREATE TABLE IF NOT EXISTS website (
   guid CHAR(32) PRIMARY KEY,
   name TEXT,
   description TEXT,
