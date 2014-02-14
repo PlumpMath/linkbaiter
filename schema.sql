@@ -6,9 +6,16 @@ CREATE TABLE IF NOT EXISTS website (
   guid CHAR(32) PRIMARY KEY,
   name TEXT,
   description TEXT,
-  url TEXT,
-  status TINYINT not null default 0,
+  url TEXT NOT NULL,
+  status TINYINT NOT NULL DEFAULT 0,
   updated DATETIME,
   created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS scrape (
+  guid CHAR(32) PRIMARY KEY,
+  website_guid CHAR(32),
+  scrape TEXT,
+  updated DATETIME,
+  created TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) DEFAULT CHARSET=utf8;
